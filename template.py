@@ -11,38 +11,46 @@ DIRECTORIES = [
     # Feature modules
     "src/auth",
     "src/users",
+    "src/places",
+    "src/bookings",
 
     # Shared modules
     "src/common",
     "src/security",
     "src/errors",
 
-    # Project support
+    # Database migrations
     "migrations",
+
+    # Tests
     "tests/unit",
     "tests/integration",
+
+    # Project support
     "scripts",
 ]
 
 FILES = [
     # Root files
-    "app.py",
-    ".env.example",
+    "main.py",
+    ".env",
     ".gitignore",
     "README.md",
     "requirements.txt",
     "pyproject.toml",
     "Dockerfile",
 
-    # Application factory and configuration
+    # Application entry point and configuration
     "src/__init__.py",
+    "src/main.py",
     "src/config.py",
-    "src/extensions.py",
+    "src/database.py",
+    "src/dependencies.py",
 
     # API registration and versioning
     "src/api/__init__.py",
     "src/api/v1/__init__.py",
-    "src/api/v1/routes.py",
+    "src/api/v1/router.py",
 
     # Authentication
     "src/auth/__init__.py",
@@ -60,6 +68,24 @@ FILES = [
     "src/users/repository.py",
     "src/users/schemas.py",
     "src/users/models.py",
+
+    # Places / workspaces
+    "src/places/__init__.py",
+    "src/places/routes.py",
+    "src/places/controller.py",
+    "src/places/service.py",
+    "src/places/repository.py",
+    "src/places/schemas.py",
+    "src/places/models.py",
+
+    # Bookings
+    "src/bookings/__init__.py",
+    "src/bookings/routes.py",
+    "src/bookings/controller.py",
+    "src/bookings/service.py",
+    "src/bookings/repository.py",
+    "src/bookings/schemas.py",
+    "src/bookings/models.py",
 
     # Shared components
     "src/common/__init__.py",
@@ -100,7 +126,7 @@ def create_structure() -> None:
         path.touch()
         print(f"Created file: {filename}")
 
-    print("\nProject structure created successfully.")
+    print("\\nProject structure created successfully.")
 
 
 if __name__ == "__main__":

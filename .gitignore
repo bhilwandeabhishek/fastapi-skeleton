@@ -1,37 +1,11 @@
-# Python project .gitignore file
+# gitignore
 
-# Environment and secrets
 .env
 .env.*
 !.env.example
-
-# Virtual environments
-venv/
 .venv/
-env/
-
-# Python cache and compiled files
 __pycache__/
 *.py[cod]
-*$py.class
-
-# Testing and coverage
 .pytest_cache/
-.coverage
-htmlcov/
-
-# Build artifacts
-build/
-dist/
-*.egg-info/
-
-# IDE and editor
-.vscode/
-.idea/
-
-# Logs
-*.log
-
-# OS files
-.DS_Store
-Thumbs.db
+.mypy_cache/
+.ruff_cache/

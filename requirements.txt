@@ -1,18 +1,30 @@
-# requirements.txt
+#requirements.txt
 
-# Web framework
-Flask==3.1.2
+#WebframeworkandASGIserver
+fastapi[standard]==0.140.9
+uvicorn[standard]==0.35.0
 
-# Environment variables
-python-dotenv==1.2.4
+#Configurationandenvironmentvariables
+pydantic-settings==2.11.0
+python-dotenv==1.2.1
 
-# Authentication
-PyJWT==2.15.1
-Flask-Bcrypt==1.0.1
+#Authenticationandsecurity
+PyJWT==2.12.1
+pwdlib[argon2]==0.2.1
+cryptography==46.0.3
 
-# Database ORM and migrations
-Flask-SQLAlchemy==3.1.1
-Flask-Migrate==4.1.0
+#DatabaseORMandmigrations
+SQLAlchemy==2.0.44
+alembic==1.17.1
 
-# MySQL driver
-mysqlclient==2.3.0
+#MySQLdatabasedriver
+PyMySQL==1.1.2
+
+#HTTPclientandtesting
+httpx==0.28.1
+pytest==8.4.2
+pytest-cov==7.0.0
+
+#Codequalityandformatting
+ruff==0.14.3
+mypy==1.18.2
