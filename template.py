@@ -69,24 +69,6 @@ FILES = [
     "src/users/schemas.py",
     "src/users/models.py",
 
-    # Places / workspaces
-    "src/places/__init__.py",
-    "src/places/routes.py",
-    "src/places/controller.py",
-    "src/places/service.py",
-    "src/places/repository.py",
-    "src/places/schemas.py",
-    "src/places/models.py",
-
-    # Bookings
-    "src/bookings/__init__.py",
-    "src/bookings/routes.py",
-    "src/bookings/controller.py",
-    "src/bookings/service.py",
-    "src/bookings/repository.py",
-    "src/bookings/schemas.py",
-    "src/bookings/models.py",
-
     # Shared components
     "src/common/__init__.py",
     "src/common/responses.py",
