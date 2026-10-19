@@ -1,5 +1,5 @@
 # FastAPI router for health check endpoints.
-
+from src.users.routes import router as users_router
 from fastapi import APIRouter
 
 router = APIRouter()
@@ -20,3 +20,10 @@ async def readiness_check() -> dict[str, str]:
     return {
         "status": "ready",
     }
+
+#router for users endpoints.
+router.include_router(
+    users_router, 
+    prefix="/users", 
+    tags=["Users"]
+)
